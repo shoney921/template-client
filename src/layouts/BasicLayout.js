@@ -1,18 +1,18 @@
 import '../styles/BasicLayout.css';
-
+import BasicMenu from '../components/menus/BasicMenu';
 const BasicLayout = ({ children }) => {
     return (
         <>
             <header className="header">
-                <h1 className="header-title">Header</h1>
+                <BasicMenu />
             </header>
             <div className="content-wrapper">
-                <main className="main-content">
+                <div className="main-content">
                     {children}
-                </main>
-                <aside className="sidebar">
+                </div>
+                <div className="sidebar">
                     <h1 className="sidebar-title">Sidebar</h1>
-                </aside>
+                </div>
             </div>
         </>
     );

@@ -5,6 +5,8 @@ const { createBrowserRouter } = require("react-router-dom");
 const Loading = () => <div>Loading...</div>;
 const MainPage = lazy(() => import("../pages/MainPage"));
 const AboutPage = lazy(() => import("../pages/AboutPage"));
+const ListPage = lazy(() => import("../pages/todo/ListPage"));
+const IndexPage = lazy(() => import("../pages/todo/IndexPage"));
 
 const router = createBrowserRouter([
     {
@@ -22,6 +24,24 @@ const router = createBrowserRouter([
                 <AboutPage />
             </Suspense>
         ),
+    },
+    {
+        path: "/todo",
+        element: (
+            <Suspense fallback={<Loading />}>
+                <IndexPage />
+            </Suspense>
+        ),
+        children: [
+            {
+                path: "list",
+                element: (
+                    <Suspense fallback={<Loading />}>
+                        <ListPage />
+                    </Suspense>
+                ),
+            },
+        ],
     },
 ]);
 
