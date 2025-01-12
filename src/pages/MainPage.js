@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import BasicLayout from "../layouts/BasicLayout"
+import '../styles/MainPage.css';
 
 const MainPage = () => {
     return (
         <BasicLayout>
-            <div className="text-3xl font-extrabold m-3 p-3">
+            <div className="welcome-title">
                 Welcome to My Website
             </div>
-            <div className="flex">
+            <div className="link-container">
                 <Link to="/about">About 페이지로 이동</Link>
             </div>
         </BasicLayout>

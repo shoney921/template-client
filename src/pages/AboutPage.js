@@ -1,11 +1,19 @@
 import React from 'react';
+import '../styles/AboutPage.css';
+import BasicLayout from '../layouts/BasicLayout';
 
 const AboutPage = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-extrabold m-3 p-3">About Us</h1>
-      <p className="text-lg">우리 회사/서비스에 대한 소개 페이지입니다.</p>
-    </div>
+    <BasicLayout>
+      <div className="about-container">
+        <div className="about-content">
+          <h1 className="about-title">About Us</h1>
+          <p className="about-description">
+            우리 회사/서비스에 대한 소개 페이지입니다.
+          </p>
+        </div>
+      </div>
+    </BasicLayout>
   );
 };
 
