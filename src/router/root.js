@@ -1,11 +1,12 @@
 import { Suspense, lazy } from "react";
+import todoRouter from "./todoRouter";
 
 const { createBrowserRouter } = require("react-router-dom");
 
 const Loading = () => <div>Loading...</div>;
 const MainPage = lazy(() => import("../pages/MainPage"));
 const AboutPage = lazy(() => import("../pages/AboutPage"));
-const ListPage = lazy(() => import("../pages/todo/ListPage"));
+// const ListPage = lazy(() => import("../pages/todo/ListPage")); // 이전 코드 (리다이렉트 하기전)
 const IndexPage = lazy(() => import("../pages/todo/IndexPage"));
 
 const router = createBrowserRouter([
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
         ),
     },
     {
-        path: "/about",
+        path: "about",
         element: (
             <Suspense fallback={<Loading />}>
                 <AboutPage />
@@ -26,22 +27,13 @@ const router = createBrowserRouter([
         ),
     },
     {
-        path: "/todo",
+        path: "todo",
         element: (
             <Suspense fallback={<Loading />}>
                 <IndexPage />
             </Suspense>
         ),
-        children: [
-            {
-                path: "list",
-                element: (
-                    <Suspense fallback={<Loading />}>
-                        <ListPage />
-                    </Suspense>
-                ),
-            },
-        ],
+        children: todoRouter,
     },
 ]);
 

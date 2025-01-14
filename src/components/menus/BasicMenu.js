@@ -8,6 +8,7 @@ const BasicMenu = () => {
                 <ul className="menu-list">
                     <li className="menu-item"> <Link to={'/'}>Main</Link> </li>
                     <li className="menu-item"> <Link to={'/about'}>About</Link> </li>
+                    <li className="menu-item"> <Link to={'/todo'}>Todo</Link> </li>
                 </ul>
             </div>
             <div className="right-menu">
