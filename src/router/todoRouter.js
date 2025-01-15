@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom";
 
 const Loading = <div>Loading...</div>;
 const ListPage = lazy(() => import("../pages/todo/ListPage"));
+const ReadPage = lazy(() => import("../pages/todo/ReadPage"));
 
 const todoRouter = [
     {
@@ -16,6 +17,14 @@ const todoRouter = [
     {
         path: "",
         element: <Navigate replace to="list" />,
+    },
+    {
+        path: "read/:id",
+        element: (
+            <Suspense fallback={Loading}>
+                <ReadPage />
+            </Suspense>
+        ),
     },
 ];
 
