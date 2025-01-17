@@ -5,8 +5,8 @@ import BasicLayout from "../../layouts/BasicLayout";
 const IndexPage: React.FC = () => {
     return (
         <BasicLayout>
-            <div className="todo-index-page">
-                <div> LIST </div>
+            <div className="todo-index-page-title">
+                <div> TODO LIST </div>
             </div>
             <div className="todo-index-page-content">
                 <Outlet />

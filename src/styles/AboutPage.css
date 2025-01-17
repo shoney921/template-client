@@ -1,18 +1,12 @@
 .about-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.about-content {
-  max-width: 48rem;
-  margin: 0 auto;
+  margin: 0;
+  padding: 1rem;
 }
 
 .about-title {
   font-size: 1.875rem;
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #111827;
 }
 
@@ -20,4 +14,4 @@
   font-size: 1.125rem;
   color: #374151;
   line-height: 1.75;
-} 
+}
