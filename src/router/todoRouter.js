@@ -4,6 +4,7 @@ import { Navigate } from "react-router-dom";
 const Loading = <div>Loading...</div>;
 const ListPage = lazy(() => import("../pages/todo/ListPage"));
 const ReadPage = lazy(() => import("../pages/todo/ReadPage"));
+const ModifyPage = lazy(() => import("../pages/todo/ModifyPage"));
 
 const todoRouter = [
     {
@@ -23,6 +24,14 @@ const todoRouter = [
         element: (
             <Suspense fallback={Loading}>
                 <ReadPage />
+            </Suspense>
+        ),
+    },
+    {
+        path: "modify/:id",
+        element: (
+            <Suspense fallback={Loading}>
+                <ModifyPage />
             </Suspense>
         ),
     },
