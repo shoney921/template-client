@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import '../../styles/BasicMenu.css';
 
-const BasicMenu = () => {
+const BasicMenu: React.FC = () => {
     return (
         <nav id='navbar'>
             <div className="left-menu">

@@ -1,8 +1,7 @@
-import React from 'react';
 import '../styles/AboutPage.css';
 import BasicLayout from '../layouts/BasicLayout';
 
-const AboutPage = () => {
+const AboutPage: React.FC = () => {
   return (
     <BasicLayout>
       <div className="about-container">

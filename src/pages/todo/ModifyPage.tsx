@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
-const ModifyPage = () => {
-    const { id } = useParams();
+const ModifyPage: React.FC = () => {
+    const { id } = useParams<{ id: string }>();
     return (
         <div className="todo-modify-page">
             Modify Page {id}

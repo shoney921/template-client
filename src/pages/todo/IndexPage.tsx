@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import BasicLayout from "../../layouts/BasicLayout";
 import "../../styles/TodoPage.css";
+import BasicLayout from "../../layouts/BasicLayout";
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
     return (
         <BasicLayout>
             <div className="todo-index-page">

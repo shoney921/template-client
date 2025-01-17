@@ -1,6 +1,7 @@
 import '../styles/BasicLayout.css';
 import BasicMenu from '../components/menus/BasicMenu';
-const BasicLayout = ({ children }) => {
+
+const BasicLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <div className='basic-layout'>
             <header className="header">

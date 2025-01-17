@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import BasicLayout from "../layouts/BasicLayout"
 import '../styles/MainPage.css';
 
-const MainPage = () => {
+const MainPage: React.FC = () => {
     return (
         <BasicLayout>
             <div className="welcome-title">

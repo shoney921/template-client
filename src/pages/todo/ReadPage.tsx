@@ -1,13 +1,13 @@
 import { useParams, useNavigate, useSearchParams } from "react-router-dom";
 
-const ReadPage = () => {
-    const { id } = useParams();
+const ReadPage: React.FC = () => {
+    const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
 
     const [queryParams, setQueryParams] = useSearchParams();
 
-    const moveToModifyPage = () => {
-        setQueryParams({ page: queryParams.get("page") || 1, size: queryParams.get("size") || 10 });
+    const moveToModifyPage = (): void => {
+        setQueryParams({ page: queryParams.get("page") || "1", size: queryParams.get("size") || "10" });
         navigate(`/todo/modify/${id}`);
     }
 
@@ -19,4 +19,4 @@ const ReadPage = () => {
     )
 }
 
-export default ReadPage;
+export default ReadPage; 

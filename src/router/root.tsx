@@ -1,11 +1,10 @@
 import { Suspense, lazy } from "react";
 import todoRouter from "./todoRouter";
+import { createBrowserRouter, RouteObject } from "react-router-dom";
 
-const { createBrowserRouter } = require("react-router-dom");
-
-const Loading = () => <div>Loading...</div>;
+const Loading: React.FC = () => <div>Loading...</div>;
 const MainPage = lazy(() => import("../pages/MainPage"));
-const AboutPage = lazy(() => import("../pages/AboutPage"));
+const AboutPage = lazy(() => import("../pages/AboutPage")); 
 const TodoIndexPage = lazy(() => import("../pages/todo/IndexPage"));
 
 const router = createBrowserRouter([
@@ -34,6 +33,6 @@ const router = createBrowserRouter([
         ),
         children: todoRouter,
     },
-]);
+] as RouteObject[]);
 
 export default router;
