@@ -14,12 +14,19 @@
 
 .main-content {
     background-color: #7dd3fc; /* bg-sky-300 */
-    padding: 10rem 1.25rem; /* py-40 px-5 */
+    padding: 1.25rem; /* px-5, removed py-40 to start from top */
+    border: 2px solid black;
+    background-color: #bae6fd; /* bg-sky-200 - lighter than current sky-300 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-height: 100%;
 }
 
 .sidebar {
     background-color: #86efac; /* bg-green-300 */
-    padding: 10rem 1.25rem; /* py-40 px-5 */
+    padding: 1.25rem; /* px-5, removed py-40 to start from top */
 }
 
 .sidebar-title {

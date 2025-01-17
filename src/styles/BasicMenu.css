@@ -4,8 +4,8 @@
 }
 
 .left-menu {
-    width: 80%; /* w-4/5 */
     background-color: rgb(107, 114, 128); /* bg-gray-500 */
+    flex: 1;
 }
 
 .menu-list {
@@ -21,12 +21,14 @@
 }
 
 .right-menu {
-    width: 20%; /* w-1/5 */
     display: flex;
     justify-content: flex-end;
     background-color: rgb(253, 186, 116); /* bg-orange-300 */
     padding: 1rem; /* p-4 */
     font-weight: 500; /* font-medium */
+    width: fit-content;
+    background-color: rgb(55, 65, 81); /* bg-gray-700 */
+    
 }
 
 .login-button {

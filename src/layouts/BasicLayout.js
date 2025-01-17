@@ -2,7 +2,7 @@ import '../styles/BasicLayout.css';
 import BasicMenu from '../components/menus/BasicMenu';
 const BasicLayout = ({ children }) => {
     return (
-        <>
+        <div className='basic-layout'>
             <header className="header">
                 <BasicMenu />
             </header>
@@ -14,7 +14,7 @@ const BasicLayout = ({ children }) => {
                     <h1 className="sidebar-title">Sidebar</h1>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
